@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+header {
+    position: absolute;
+    top: 2.5%;
+    color: rgb(27, 27, 27);
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.winner {
+    position: absolute;
+    bottom: 5%;
+    color: rgb(27, 27, 27);
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+h1 {
+    text-align: justify;
+}
+
+.gameboard {
+    position: relative;
+}
+
+.lines {
+    position: absolute;
+    z-index: -1;
+    height: 450px;
+    width: 450px;
+}
+
+.fields {
+    height: 450px;
+    width: 450px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    max-height: 150px;
+    min-height: 140px;
+}
+
+.horizontal {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.h0 {
+    visibility: hidden;
+    height: 5px;
+    width: 0%;
+    background-color: black;
+    transition: width 0.25s ease-in-out;
+}
+
+.h1 {
+    visibility: hidden;
+    height: 5px;
+    width: 0%;
+    background-color: black;
+    transition: width 0.25s ease-in-out;
+}
+
+.h2 {
+    visibility: hidden;
+    height: 5px;
+    width: 0%;
+    background-color: black;
+    transition: width 0.25s ease-in-out;
+}
+
+.vertical {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.v0 {
+    visibility: hidden;
+    height: 0%;
+    width: 5px;
+    background-color: black;
+    transition: height 0.25s ease-in-out;
+}
+
+.v1 {
+    visibility: hidden;
+    height: 0%;
+    width: 5px;
+    background-color: black;
+    transition: height 0.25s ease-in-out;
+}
+
+.v2 {
+    visibility: hidden;
+    height: 0%;
+    width: 5px;
+    background-color: black;
+    transition: height 0.25s ease-in-out;
+}
+
+.d0 {
+    border: none;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 5px;
+    top: 50%;
+    transform: translate(0, -50%);
+    transform: rotateY(0deg) rotate(45deg);
+}
+
+.d1 {
+    border: none;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 5px;
+    top: 50%;
+    transform: translate(0, -50%);
+    transform: rotateY(0deg) rotate(-45deg);
+}
+
+.d0 span {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: black;
+    transition: width 0.25s ease-in-out;
+}
+
+.d1 span {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: black;
+    transition: width 0.25s ease-in-out;
+}
+
+/* Individual fields border */
+.f00 {
+    border-bottom: solid 2px black;
+    border-right: solid 2px black;
+}
+
+.f01 {
+    border-bottom: solid 2px black;
+}
+
+.f02 {
+    border-left: solid 2px black;
+    border-bottom: solid 2px black;
+}
+
+.f10 {
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+}
+
+.f11 {
+    border-bottom: solid 2px black;
+}
+
+.f12 {
+    border-bottom: solid 2px black;
+    border-left: solid 2px black;
+}
+
+.f20 {
+    border-right: solid 2px black;
+}
+
+.f22 {
+    border-left: solid 2px black;
+}
